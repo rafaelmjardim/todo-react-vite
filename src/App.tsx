@@ -13,7 +13,13 @@ function App() {
 
           <ul className='app_container_list'>
             <li className='app_container_list_item'>
-              <span>Item</span>
+              <div className="app_container_list_item_left">
+                <span>icon</span>
+                <span>Item</span>
+              </div>
+              <div className="div">
+                actions
+              </div>
             </li>
           </ul>
         </div>

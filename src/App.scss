@@ -29,6 +29,9 @@
 
     &_list {
       width: 33rem;
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
 
       &_item {
         display: flex;
@@ -36,8 +39,13 @@
         align-items: center;
         padding: .8rem;
         background-color: #fff;
-        border-radius: 1rem;
+        border-radius: .5rem;
         height: 3rem;
+
+        &_left {
+          display: flex;
+          gap: 1rem;
+        }
       }
     }
   }
