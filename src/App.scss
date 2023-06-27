@@ -23,7 +23,7 @@
       }
       
       input:focus {
-        outline: .1rem solid rgb(194, 188, 255);
+        outline: .1rem solid #c2bcff;
       }
     }
 
@@ -46,6 +46,14 @@
           display: flex;
           align-items: center;
           gap: .8rem;
+        }
+
+        &_right {
+          &_icon {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+          }
         }
       }
     }
