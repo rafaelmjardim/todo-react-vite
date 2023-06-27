@@ -1,4 +1,5 @@
 import './App.scss'
+import { ClipboardList, X, ClipboardEdit } from "lucide-react";
 
 function App() {
 
@@ -14,11 +15,11 @@ function App() {
           <ul className='app_container_list'>
             <li className='app_container_list_item'>
               <div className="app_container_list_item_left">
-                <span>icon</span>
-                <span>Item</span>
+              <ClipboardList size={20}/>
+                <span>Título da tarefa</span>
               </div>
-              <div className="div">
-                actions
+              <div className="app_container_list_item_right">
+              <X size={16}/>
               </div>
             </li>
           </ul>
