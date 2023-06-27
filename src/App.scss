@@ -2,7 +2,7 @@
   &_container {
     width: 50rem;
     height: 60rem;
-    background-color: blue;
+    // background-color: blue;
     border-radius: 1rem;
     display: flex;
     gap: 1.2rem;
@@ -17,6 +17,13 @@
 
       input {
         width: 25rem;
+        border-radius: .5rem;
+        border: none;
+        padding: 1rem;
+      }
+      
+      input:focus {
+        outline: .1rem solid rgb(194, 188, 255);
       }
     }
 
