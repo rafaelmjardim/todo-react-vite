@@ -1,5 +1,5 @@
 import './App.scss'
-import { ClipboardList, X } from "lucide-react";
+import Todo from './components/Todo';
 
 function App() {
 
@@ -11,6 +11,10 @@ function App() {
     {
       id: 2,
       name: 'Segundo item'
+    },
+    {
+      id: 3,
+      name: 'Terceiro item'
     },
   ];  
 
@@ -26,17 +30,7 @@ function App() {
           <ul className='app_container_list'>
             {
               todoList.map(todo => (
-                <li className='app_container_list_item' key={todo.id}>
-                  <div className="app_container_list_item_left">
-                    <ClipboardList size={20}/>
-                    <span>{todo.name}</span>
-                  </div>
-                  <div className="app_container_list_item_right">
-                    <div className='app_container_list_item_right_icon' onClick={() => alert('Excluiu')}>
-                      <X size={16}/>
-                    </div>
-                  </div>
-                </li>
+                <Todo todo={todo} key={todo.id} />
               ))
             }
           </ul>
