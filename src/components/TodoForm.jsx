@@ -1,7 +1,21 @@
+import { useState } from "react";
+
 const TodoForm = () => {
+
+    const [task, setTask] = useState("");
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if(!task) {
+            return
+        }
+        
+        //Limpar inputs (a tag value do input precisa reseber a task para limpar)
+        setTask('');
+    }
     return (
-        <form className='app_container_form'>
-            <input type="text"  placeholder='Insira sua tarefa'/>
+        <form className='app_container_form' onSubmit={handleSubmit}>
+            <input type="text"  placeholder='Insira sua tarefa' value={task} onChange={event => setTask(event.target.value)}/>
             <button className='button'>Enviar</button>
         </form>
     );
