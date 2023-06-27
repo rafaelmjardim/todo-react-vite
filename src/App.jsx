@@ -1,10 +1,11 @@
+import { useState } from 'react';
 import './App.scss'
 import Todo from './components/Todo';
 import TodoForm from './components/TodoForm';
 
 function App() {
 
-  const todoList = [
+  const [todoList, setTodoList] = useState([
     {
       id: 1,
       name: 'Primeiro item'
@@ -17,14 +18,24 @@ function App() {
       id: 3,
       name: 'Terceiro item'
     },
-  ];  
+  ]);  
+
+  const addTodo = (name) => {
+    const newTodos = [...todoList, {
+      id: Math.floor(Math.random() * 1000),
+      name,
+    }];
+    
+    
+    setTodoList(newTodos);
+  }
 
   return (
     <>
       <div className='app'>
         <div className='app_container'>
 
-          <TodoForm />
+          <TodoForm addTodo={addTodo}/>
 
           <ul className='app_container_list'>
             {

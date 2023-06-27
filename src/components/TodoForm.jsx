@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TodoForm = () => {
+const TodoForm = ({addTodo}) => {
 
     const [task, setTask] = useState("");
 
@@ -9,6 +9,7 @@ const TodoForm = () => {
         if(!task) {
             return
         }
+        addTodo(task)
         
         //Limpar inputs (a tag value do input precisa reseber a task para limpar)
         setTask('');
